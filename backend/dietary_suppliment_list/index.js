@@ -16,7 +16,6 @@ exports.handler = (event, context, callback) => {
         ProjectionExpression: 'diet_id, supplements'
       };
       
-      // Call DynamoDB to read the item from the table
       dynamodb.getItem(params, (err, data) => {
         if (err) {
             console.log(err, err.stack);
@@ -32,7 +31,7 @@ exports.handler = (event, context, callback) => {
                 "Access-Control-Allow-Origin": `*`,
                 "Access-Control-Allow-Credentials": true,
                 },
-                message: 'Doctor detail insert Successful',
+                message: 'Dietary supplements list found.',
                 body: data.Item,
             }
             callback(null, {
