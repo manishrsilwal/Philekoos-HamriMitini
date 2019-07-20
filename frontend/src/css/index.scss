@@ -30,13 +30,14 @@
 
           .card-body{
             width: 100%;
-            padding-top: 100px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
 
             .call-for-action{
-              align-self: flex-end;
+              margin-top: 100px;
+              // align-self: flex-end;
             }
           }
         }
@@ -84,6 +85,28 @@
       @media screen and (max-width: $tablet-screen){
         width: max-content;
         overflow-x: hidden;
+      }
+    }
+  }
+
+  #featured-stories{
+
+    .story-row{
+      width: 100%;
+      margin-top: 45px;
+
+      .individual-story{
+        text-align: center;
+        padding: 25px;
+
+        img{
+          width: 351px;
+          height: 351px;
+        }
+
+        &:hover{
+          // box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.45) !important;
+        }
       }
     }
   }

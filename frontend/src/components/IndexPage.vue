@@ -12,6 +12,14 @@
             </h4>
 
             <div class="card-body">
+              <div class="description">
+                <!-- Find yourself the relevant materials for health awareness <br /> -->
+                <!-- get connected with health expert, get instant view near of pharmacy, hospitals. -->
+                <!-- Overall, Take care of your health, wherever you are through one-stop digital platform. -->
+                <h1>Health</h1>
+                <h1>Awareness</h1>
+
+              </div>
               <div class="call-for-action">
                 <b-button variant="outline-info">Explore</b-button>
               </div>
@@ -21,12 +29,41 @@
       </div>
     </div>
 
-    <div class="featured-stories card-view">
+    <div class="featured-stories card-view" id="featured-stories">
       <div class="row">
         <div class="col-12">
           <div class="card shadow">
             <div class="title-box shadow">
               <h6>Featured Stories</h6>
+            </div>
+
+            <div class="row story-row">
+              <div class="col-4">
+                <div class="individual-story card-hover">
+                  <b-img class="pt-3" src="fear.png" fluid></b-img>
+                  <h6 class="pt-4">Being a Girl Thing</h6>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="individual-story card-hover">
+                  <iframe width="100%" class="pt-3" height="361" src="https://www.youtube.com/embed/rZC8E7p3-xs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <h6 class="pt-4">Nepal's Female Community Health Volunteers - Saving Lives, Empowering Women</h6>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="individual-story card-hover">
+                  <b-img class="pt-3" src="notouch.png" fluid></b-img>
+                  <h6 class="pt-4">Chaupadi, a tradition in Nepal, turns menstruating women into untouchables</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-12">
+                <b-button variant="outline-primary">Read More</b-button>
+              </div>
             </div>
           </div>
         </div>

@@ -16,6 +16,15 @@
             <div class="first-step steps card shadow" v-show="first_step">
               <h5 class="mb-4">Enter your age</h5>
               <b-input type="text" size="lg" block placeholder="Age">Age</b-input>
+              <!-- <b-form-select size="lg" class="mb-3">
+                <template slot="first">
+                  <option value="" disabled>Select Your Age</option>
+                </template>
+                <option value="a">20-30</option>
+                <option value="b">30-40</option>
+                <option value="c">40-50</option>
+                <option value="d">50-60</option>
+              </b-form-select> -->
               <b-button variant="outline-success" class="mt-4 mb-4" @click="FirstSubmit">Next</b-button>
             </div>
 
@@ -103,26 +112,39 @@
         <div class="results">
           <b-tabs pills content-class="mt-3">
             <b-tab title="Supplements for You" active>
-              <!-- <b-card-text>Here you add theme</b-card-text> -->
               <b-form class="card shadow">
                 <h3>Needed Supplements</h3>
-                <h4>For Skin</h4>
-                <h4>For Weight Loss</h4>
+                <div class="mt-3" v-for="values in api_data.data">
+                  <h4>For {{ values.diet_id}}</h4>
+                  <p>
+                    <ul>
+                      <li v-for="list in values.supplements" v-html="list">
+                        {{ list }}
+                      </li>
+                    </ul>
+                  </p>
+                </div>
               </b-form>
             </b-tab>
 
             <b-tab title="Get Supplements">
-              <!-- <b-card-text>Tab Contents 2</b-card-text> -->
               <div class="card shadow">
                 <h3 class="pb-3">Location for Supplements</h3>
-
+                <div class="mt-3" v-for="values in pharmacy_list.data">
+                  <h4>{{ values.name }}</h4>
+                  <p> {{ values.phoneNo }} </p>
+                  <p>{{ values.location }}</p>
+                </div>
               </div>
             </b-tab>
 
             <b-tab title="Need a Help?" active>
-              <!-- <b-card-text>Here you add theme</b-card-text> -->
               <b-form class="card shadow">
                 <h3>Recommended Nutritionist</h3>
+                <div class="mt-3" v-for="values in doctors.data">
+                  <h4>{{ values.name }}</h4>
+                  <p> {{ values.affiliation }} </p>
+                </div>
               </b-form>
             </b-tab>
           </b-tabs>
@@ -150,6 +172,8 @@ export default {
   data() {
     return {
       api_data: '',
+      pharmacy_list: '',
+      doctors: '',
       formShow: true,
       first_step: true,
       second_step: false,
@@ -162,14 +186,20 @@ export default {
   },
 
   mounted () {
-    // axios
-    //   .get('https://75anpql3b4.execute-api.ap-southeast-1.amazonaws.com/development/dietary-supplements/list',
-    //   {
-    //     headers: {
-    //       'diet_id': 'skin'
-    //     }
-    //   })
-    //   .then(response => (this.api_data = response))
+    axios.all([
+      axios.get('https://6vttxpfew0.execute-api.ap-southeast-1.amazonaws.com/development/dietary-supplements'),
+      axios.get('https://6vttxpfew0.execute-api.ap-southeast-1.amazonaws.com/development/pharmacy-list'),
+      axios.get('https://6vttxpfew0.execute-api.ap-southeast-1.amazonaws.com/development/doctors-list')
+    ])
+      .then(
+        axios.spread((supplements, pharmacy, doctors) => {
+          this.api_data = supplements,
+          this.pharmacy_list = pharmacy,
+          this.doctors = doctors
+
+        }
+        )
+      )
   },
 
   methods:{

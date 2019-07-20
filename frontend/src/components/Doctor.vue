@@ -10,46 +10,61 @@
     </div>
 
     <div class="row mt-4">
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-lg-4" v-for="values in api_data.data">
         <div class="card card-hover">
           <div class="individual-doctor">
-            <b-img class="pt-3" src="doctors/drnira.jpg" fluid></b-img>
-            <h6 class="pt-2">Dr. Nira Shrestha</h6>
-            <small>Department of Gynaecology and Obstetrics <br /> Kathmandu Medical College Teaching Hospital</small>
+            <b-img class="pt-3" :src="'https://hamrimitini.s3-ap-southeast-1.amazonaws.com/doctors/' + values.image" fluid></b-img>
+            <h6 class="pt-2">{{ values.name }}</h6>
+            <small>{{ values.affiliation }}</small>
           </div>
           <div class="call-for-action">
-            <b-button variant="outline-info" to="/doctor">Take an Appointment</b-button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-4">
-        <div class="card card-hover">
-          <div class="individual-doctor">
-            <b-img class="pt-3" src="doctors/drbal.jpg" fluid></b-img>
-            <h6 class="pt-2">Dr. Bal Krishna Shah</h6>
-            <small>MBBS, DGO Obs & Gynaecology</small>
-          </div>
-          <div class="call-for-action">
-            <b-button variant="outline-info" to="/doctor">Take an Appointment</b-button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-4">
-        <div class="card card-hover">
-          <div class="individual-doctor">
-            <b-img class="pt-3" src="doctors/drsabina.jpg" fluid></b-img>
-            <h6 class="pt-2">Dr. Sabina Shrestha</h6>
-            <small>Obsetetrician and Gynaecologist <br /> Om Hospital and Research Center</small>
-          </div>
-
-          <div class="call-for-action">
-            <b-button variant="outline-info" to="/doctor">Take an Appointment</b-button>
+            <b-button variant="outline-info" v-b-modal.modal-1>Take an Appointment</b-button>
           </div>
         </div>
       </div>
     </div>
+
+    <b-modal ref="modal1" id="modal-1" title="Appointment Form" hide-footer>
+      <!-- <p class="my-4">Hello from modal!</p> -->
+      <b-form @submit.prevent>
+        <b-form-group label-for="name">
+          <small class="pb-3">Full Name</small>
+          <b-form-input placeholder="Your Full Name"></b-form-input>
+        </b-form-group>
+
+        <b-form-group label-for="name">
+          <small class="pb-3">Phone Number</small>
+          <b-form-input placeholder="Your Phone Number"></b-form-input>
+        </b-form-group>
+
+        <b-form-group label-for="name">
+          <small class="pb-3">Address</small>
+          <b-form-input placeholder="Your Address"></b-form-input>
+        </b-form-group>
+
+        <b-form-group label-for="name">
+          <small class="pb-3">Date of Appointment</small>
+          <b-form-input type="date" placeholder="Date"></b-form-input>
+        </b-form-group>
+
+        <b-form-group label-for="name">
+          <small class="pb-3">Reason for Appointment</small>
+          <b-form-textarea placeholder="Tell us about your problem"></b-form-textarea>
+        </b-form-group>
+
+        <div class="col-md-12 text-center">
+          <b-button type="submit" variant="outline-success" @click="FormSubmit">Submit Appointment Form</b-button>
+        </div>
+      </b-form>
+    </b-modal>
+
+    <b-toast id="success-toast" variant="success" solid append-toast toaster="b-toaster-top-center">
+      <div slot="toast-title" class="d-flex flex-grow-1 align-items-baseline">
+
+        <strong class="mr-auto">Form is successfully submitted</strong>
+      </div>
+        Please check your email for further details.
+    </b-toast>
   </div>
 </div>
 </template>
@@ -73,14 +88,19 @@ export default {
   mounted () {
     axios
       .get('https://6vttxpfew0.execute-api.ap-southeast-1.amazonaws.com/development/doctors-list')
-      .then(response => (this.api_data = response))
+      .then(
+        response => (this.api_data = response)
+    )
   },
 
-  // methods:{
-  //   ...mapActions(['setToken']),
+  methods:{
+    // ...mapActions(['setToken']),
+    FormSubmit(){
+      this.$refs.modal1.hide();
+      this.$bvToast.show('success-toast');
+    }
 
-
-  // }
+  }
 };
 </script>
 
