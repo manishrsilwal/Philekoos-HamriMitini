@@ -1,35 +1,28 @@
 # Supplements 
 
- SOMETIMES FOOD IS NOT ENOUGH
-The causes of vitamin and mineral deficiencies are multiple, as well as interconnected.
+ Some time food is not just enough, extra  nutrients are needed. 
 
-At the most basic level, the problem is related to diet and access to sufficient amounts of nutrient-rich foods. 
-
-When we say "supplements," we're talking about vitamins, minerals, herbs, and other natural products. They are things you take in addition to what you eat -- they supplement your diet. When used right, supplements can help keep your body and mind well in many ways. We'll explain more below.
-
-
-
-
-
+When we say "supplements," we're talking about vitamins, minerals, herbs, and other natural products. They are things we take in addition to what we eat -- they supplement our diet for better health. When used right, supplements can help keep our body and mind well in many ways.
 
 
 # Supplements For you
 ### Skin Health
 
 
-Healthy fats, such as omega-3 fatty acids, and foods rich in antioxidants can help keep your skin healthy.
+Healthy fats, such as omega-3 fatty acids, and foods rich in antioxidants can help keep our skin healthy.
 
- Antioxidants, including vitamins C and E, and selenium speed up skin repair and help prevent sun damage and skin cancer. 
+ Antioxidants, including vitamins C and E speeds up skin repair and help prevent sun damage.
+
 Other supplements that may slow skin aging are:
-* Coenzyme Q10
+
 * Green tea
 * Soy
 * B vitamins
-Of course, you should always wear sunscreen, especially if you're using a product with vitamin A on your skin, since that makes it more sun-sensitive.
+Fact:  Eear sunscreen , especially if you're using a product with vitamin A on your skin, as  that will make your skin  more sun-sensitive.
 
 ### Weight Loss 
 
-Losing weight comes down to what you eat and how active you are. Some people also turn to supplements to help, but they won't replace a healthy plan for diet and exercise.
+Losing weight comes down to what you eat and how active you are. Some  supplements to help,
 
 
 * Green Tea  : Burning more calories and targeting fat.
