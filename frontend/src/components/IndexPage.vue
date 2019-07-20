@@ -3,7 +3,7 @@
   <app-header></app-header>
 
   <div class="contents">
-    <div class="row">
+    <div class="row wrapper-image-section">
       <div class="col-12 wrapper-image">
         <div class="wrapper-card-section">
           <div class="card shadow wrapper-card">
@@ -139,13 +139,19 @@ export default {
 
   data() {
     return {
-      // api_data: '',
+      api_data: '',
     }
   },
 
   mounted () {
     // axios
-    //   .get('https://75anpql3b4.execute-api.ap-southeast-1.amazonaws.com/development/list-contact')
+    //   .get('https://75anpql3b4.execute-api.ap-southeast-1.amazonaws.com/development/dietary-supplements/list',
+    //   {
+    //     headers: {
+    //       diet_id: 'skin'
+    //     }
+    //
+    // })
     //   .then(response => (this.api_data = response))
   },
 

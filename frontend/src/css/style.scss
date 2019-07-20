@@ -88,7 +88,7 @@ body{
 
       &:hover{
         transition: 0.5s ease;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
       }
     }
 
@@ -98,7 +98,7 @@ body{
     }
 
     .page-title{
-      
+
     }
 
     @media screen and (max-width: $tablet-screen){

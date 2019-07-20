@@ -9,17 +9,17 @@
       </div>
     </div>
 
-    <div class="row" v-show="formShow">
+    <div class="row mt-4" v-show="formShow">
       <div class="col-12">
         <div class="food-form-section d-flex align-items-center justify-content-center">
           <form class="">
-            <div class="first-step steps" v-show="first_step">
+            <div class="first-step steps card shadow" v-show="first_step">
               <h5 class="mb-4">Enter your age</h5>
-              <b-input type="text" block placeholder="Age">Age</b-input>
+              <b-input type="text" size="lg" block placeholder="Age">Age</b-input>
               <b-button variant="outline-success" class="mt-4 mb-4" @click="FirstSubmit">Next</b-button>
             </div>
 
-            <div class="second-step steps" v-show="second_step">
+            <div class="second-step steps card shadow" v-show="second_step">
               <h5 class="mb-4">Are you taking any vitamins or not?</h5>
               <b-form-group class="radio">
                 <b-form-radio-group size="lg">
@@ -30,7 +30,7 @@
               <b-button variant="outline-success" class="mt-4 mb-4" @click="SecondSubmit">Next</b-button>
             </div>
 
-            <div class="third-step steps text-center" v-show="third_step">
+            <div class="third-step steps text-center card shadow" v-show="third_step">
               <h5 class="mb-4">What are you most concerned about?</h5>
               <b-form-group class="radio">
                 <b-form-radio-group size="lg">
@@ -52,7 +52,7 @@
               <b-button variant="outline-success" class="mt-4 mb-4" @click="ThirdSubmit">Next</b-button>
             </div>
 
-            <div class="fourth-step steps text-center" v-show="fourth_step">
+            <div class="fourth-step steps text-center card shadow" v-show="fourth_step">
               <h5 class="mb-4">Which of these best describes your diet?</h5>
               <b-form-group class="radio">
                 <b-form-radio-group size="lg">
@@ -65,7 +65,7 @@
               <b-button variant="outline-success" class="mt-4 mb-4" @click="FourthSubmit">Next</b-button>
             </div>
 
-            <div class="fifth-step steps" v-show="fifth_step">
+            <div class="fifth-step steps card shadow" v-show="fifth_step">
               <h5 class="mb-4">Are there any kinds of food you avoid due to medical reasons?</h5>
               <b-form-group class="radio">
                 <b-form-radio-group size="lg">
@@ -78,7 +78,7 @@
               <b-button variant="outline-success" class="mt-4 mb-4" @click="FifthSubmit">Next</b-button>
             </div>
 
-            <div class="sixth-step steps" v-show="sixth_step">
+            <div class="sixth-step steps card shadow" v-show="sixth_step">
               <h5 class="mb-4">How often you usually get sick?</h5>
               <b-form-group class="radio">
                 <b-form-radio-group size="lg">
@@ -115,7 +115,7 @@
               <!-- <b-card-text>Tab Contents 2</b-card-text> -->
               <div class="card shadow">
                 <h3 class="pb-3">Location for Supplements</h3>
-              
+
               </div>
             </b-tab>
 
