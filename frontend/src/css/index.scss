@@ -19,14 +19,91 @@
         margin: 15vh;
         max-height: 50vh;
         height: 50vh;
-        min-width: 20vw;
+        min-width: 25vw;
 
-        .card-title{
-          text-align: center;
-          text-transform: capitalize;
+        .card-body{
+          width: 100%;
+          padding-top: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .call-for-action{
+            align-self: flex-end;
+          }
         }
       }
     }
 
+  }
+
+  .card-view{
+    padding: 50px;
+
+    .card-body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .call-for-action{
+        margin-top: 25px;
+        align-self: center;
+      }
+    }
+  }
+
+  .card{
+    min-height: 400px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .title-box{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      transform: translateY(-50px);
+      padding: 15px;
+      background: inherit;
+      border-radius: 15px;
+      text-align: center;
+      text-transform: capitalize;
+
+      @media screen and (max-width: $tablet-screen){
+        width: max-content;
+        overflow-x: hidden;
+      }
+    }
+  }
+
+  #doctors{
+
+    .doctors-list{
+
+      .individual-doctor{
+        padding: 25px;
+
+        img{
+          height: 180px;
+          width: 180px;
+        }
+
+      }
+    }
+  }
+
+  #education{
+
+    .education-list{
+
+      .individual-education{
+        padding: 25px;
+
+      }
+    }
   }
 }

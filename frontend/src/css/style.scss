@@ -25,6 +25,10 @@ $large-screen: 1200px;
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-size: 17px;
   min-height: 100vh;
@@ -78,6 +82,14 @@ body{
       padding: 25px;
       margin-bottom: 30px;
       border-radius: 15px;
+    }
+
+    .card-hover{
+
+      &:hover{
+        transition: 0.5s ease;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+      }
     }
 
     .data-list{
