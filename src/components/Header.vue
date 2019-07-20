@@ -8,9 +8,9 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item to="/">Home</b-nav-item>
-        <b-nav-item to="">Food Supplies</b-nav-item>
-        <b-nav-item to="">Doctor Appointment</b-nav-item>
-        <b-nav-item to="">Education</b-nav-item>
+        <b-nav-item to="/food">Food Supplies</b-nav-item>
+        <b-nav-item to="/doctor">Doctor Appointment</b-nav-item>
+        <b-nav-item to="/education">Education</b-nav-item>
         <b-nav-item to="">Online Consultancy</b-nav-item>
         <b-nav-item to="">Location</b-nav-item>
         <!-- <b-nav-item to="/users">Users</b-nav-item> -->
