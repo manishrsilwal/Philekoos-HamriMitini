@@ -8,14 +8,11 @@
         <div class="wrapper-card-section">
           <div class="card shadow wrapper-card">
             <h4 class="card-title title-box shadow">
-              Introduction
+              Welcome to
             </h4>
 
             <div class="card-body">
               <div class="description">
-                <!-- Find yourself the relevant materials for health awareness <br /> -->
-                <!-- get connected with health expert, get instant view near of pharmacy, hospitals. -->
-                <!-- Overall, Take care of your health, wherever you are through one-stop digital platform. -->
                 <h1>Hamri Mitini</h1>
                 <h1>हाम्री मितिनी</h1>
 
