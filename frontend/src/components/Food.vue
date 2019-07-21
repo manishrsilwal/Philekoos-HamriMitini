@@ -27,7 +27,7 @@
       <div class="col-12">
         <h3>Please fill up the form to know about necessary supplements:</h3>
         <div class="food-form-section d-flex align-items-center justify-content-center">
-          <form>
+          <form @submit.prevent>
             <div class="first-step steps card shadow" v-show="first_step">
               <h5 class="mb-4">Enter your age</h5>
               <b-input type="text" size="lg" block placeholder="Age">Age</b-input>
