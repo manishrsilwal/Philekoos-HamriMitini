@@ -16,12 +16,12 @@
                 <!-- Find yourself the relevant materials for health awareness <br /> -->
                 <!-- get connected with health expert, get instant view near of pharmacy, hospitals. -->
                 <!-- Overall, Take care of your health, wherever you are through one-stop digital platform. -->
-                <h1>Health</h1>
-                <h1>Awareness</h1>
+                <h1>Hamri Mitini</h1>
+                <h1>हाम्री मितिनी</h1>
 
               </div>
               <div class="call-for-action">
-                <b-button variant="outline-info">Explore</b-button>
+                <a class="btn btn-outline-info" href="#featured-stories">Explore Stories</a>
               </div>
             </div>
           </div>
@@ -38,25 +38,15 @@
             </div>
 
             <div class="row story-row">
-              <div class="col-4">
-                <div class="individual-story card-hover">
-                  <b-img class="pt-3" src="fear.png" fluid></b-img>
-                  <h6 class="pt-4">Being a Girl Thing</h6>
-                </div>
-              </div>
+              <div class="col-4" v-for="contents in stories.data">
+                <router-link :to="{name: 'story', params: {id: contents.story_id}}">
+                  <div class="individual-story card-hover">
+                    <b-img class="pt-3" v-if="contents.image" :src="'https://hamrimitini.s3-ap-southeast-1.amazonaws.com/stories/' + contents.image" fluid></b-img>
+                    <iframe v-else width="100%" class="pt-3" height="361" :src="contents.video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-              <div class="col-4">
-                <div class="individual-story card-hover">
-                  <iframe width="100%" class="pt-3" height="361" src="https://www.youtube.com/embed/rZC8E7p3-xs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  <h6 class="pt-4">Nepal's Female Community Health Volunteers - Saving Lives, Empowering Women</h6>
-                </div>
-              </div>
-
-              <div class="col-4">
-                <div class="individual-story card-hover">
-                  <b-img class="pt-3" src="notouch.png" fluid></b-img>
-                  <h6 class="pt-4">Chaupadi, a tradition in Nepal, turns menstruating women into untouchables</h6>
-                </div>
+                    <h6 class="pt-4 story-title">{{ contents.title }}</h6>
+                  </div>
+                </router-link>
               </div>
             </div>
 
@@ -70,12 +60,42 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="nutrients">
       <div class="col-lg-4 col-md-12 col-sm-12">
         <div class="card-view">
           <div class="card shadow">
             <div class="title-box shadow">
-              <h6>Food</h6>
+              <h6>Nutritions</h6>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12">
+                  <div class="doctors-list text-center">
+                    <div class="individual-nutrients card-hover">
+                      <h6 class="pt-2">Calcium</h6>
+                      <b-img class="pt-3" src="cheese.jpg" fluid></b-img>
+                      <small>Cheese</small>
+                    </div>
+
+                    <div class="individual-nutrients card-hover">
+                      <h6 class="pt-2">Folic Acid</h6>
+                      <b-img class="pt-3" src="legumes.jpg" fluid></b-img>
+                      <small>Legume</small>
+                    </div>
+
+                    <div class="individual-nutrients card-hover">
+                      <h6 class="pt-2">Magnesium</h6>
+                      <b-img class="pt-3" src="avocado.jpg" fluid></b-img>
+                      <small>Avocado</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="call-for-action">
+                <b-button variant="outline-info" to="/food">Know More</b-button>
+              </div>
             </div>
           </div>
         </div>
@@ -177,19 +197,27 @@ export default {
   data() {
     return {
       api_data: '',
+      stories: '',
+      id: ''
     }
   },
 
   mounted () {
-    // axios
-    //   .get('https://75anpql3b4.execute-api.ap-southeast-1.amazonaws.com/development/dietary-supplements/list',
-    //   {
-    //     headers: {
-    //       diet_id: 'skin'
-    //     }
-    //
-    // })
-    //   .then(response => (this.api_data = response))
+    axios.all([
+      axios.get(
+        'https://6vttxpfew0.execute-api.ap-southeast-1.amazonaws.com/development/stories-list'),
+      // axios.get('https://6vttxpfew0.execute-api.ap-southeast-1.amazonaws.com/development/pharmacy-list'),
+      // axios.get('https://6vttxpfew0.execute-api.ap-southeast-1.amazonaws.com/development/doctors-list')
+    ])
+      .then(
+        axios.spread((stories) => {
+          this.stories = stories
+          // this.pharmacy_list = pharmacy,
+          // this.doctors = doctors
+
+        }
+        )
+    )
   },
 
   // methods:{

@@ -9,7 +9,21 @@
       </div>
     </div>
 
-    <div class="row mt-4" v-show="formShow">
+    <div class="row">
+      <div class="col-12">
+        <div class="card shadow">
+          <p>
+            Some time food is not just enough, extra nutrients are needed.
+          </p>
+
+          <p>
+            When we say "supplements," we're talking about vitamins, minerals, herbs, and other natural products. They are things we take in addition to what we eat -- they supplement our diet for better health. When used right, supplements can help keep our body and mind well in many ways.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" v-show="formShow">
       <div class="col-12">
         <div class="food-form-section d-flex align-items-center justify-content-center">
           <form class="">

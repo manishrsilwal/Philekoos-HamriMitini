@@ -12,7 +12,7 @@
         <b-nav-item to="/doctor">Doctor Appointment</b-nav-item>
         <b-nav-item to="/education">Education</b-nav-item>
         <b-nav-item to="">Online Consultancy</b-nav-item>
-        <b-nav-item to="">Location</b-nav-item>
+        <b-nav-item to="">Pharmacy</b-nav-item>
         <!-- <b-nav-item to="/users">Users</b-nav-item> -->
         <!-- <b-nav-item to="/geography">Area</b-nav-item> -->
         <!-- <b-nav-item to="/activity">Activity</b-nav-item> -->
