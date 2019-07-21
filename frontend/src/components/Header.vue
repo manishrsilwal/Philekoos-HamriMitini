@@ -1,7 +1,7 @@
 <template>
 <div id="app" class="header">
   <b-navbar toggleable="lg" type="light" fixed="top">
-    <b-navbar-brand to="/">HamriMitini</b-navbar-brand>
+    <b-navbar-brand to="/"><img src="logo.png" /></b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
