@@ -25,6 +25,10 @@ $large-screen: 1200px;
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-size: 17px;
   min-height: 100vh;
@@ -69,7 +73,7 @@ body{
   }
 
   .contents{
-    padding-top: 80px;
+    padding-top: 130px;
     padding-right: 60px;
     padding-left: 60px;
     height: 100%;
@@ -80,9 +84,21 @@ body{
       border-radius: 15px;
     }
 
+    .card-hover{
+
+      &:hover{
+        transition: 0.5s ease;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+    }
+
     .data-list{
       max-height: 70vh;
       overflow-y: auto;
+    }
+
+    .page-title{
+
     }
 
     @media screen and (max-width: $tablet-screen){

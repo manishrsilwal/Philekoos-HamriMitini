@@ -1,5 +1,15 @@
 @import "./style";
 
 .contents{
+  .card-hover{
+    text-align: center;
 
+    &:hover{
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.45) !important;
+    }
+
+    .individual-education{
+      padding: 25px;
+    }
+  }
 }

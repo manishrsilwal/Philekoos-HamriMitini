@@ -10,6 +10,10 @@
 
     .navbar-brand{
       color: $title-color !important;
+
+      img{
+        height: 80px;
+      }
     }
 
     .navbar-nav{

@@ -2,31 +2,146 @@
 // @import "./authentication";
 
 .contents{
-  .wrapper-image{
-    max-height: 100vh;
-    height: 100vh;
-    // background: url('../../public/banner.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+
+  .wrapper-image-section{
     margin: 0;
-    padding: 0;
+    margin-top: -70px;
+    margin-left: -60px;
+    margin-right: -60px;
 
-    .wrapper-card-section{
+    .wrapper-image{
+      max-height: 100vh;
+      height: 100vh;
+      background: url('../../public/banner.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+
+      .wrapper-card-section{
+        display: flex;
+        justify-content: flex-start;
+
+        .wrapper-card{
+          margin: 25vh;
+          max-height: 50vh;
+          height: 50vh;
+          min-width: 18vw;
+
+          .card-body{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .call-for-action{
+              margin-top: 100px;
+              // align-self: flex-end;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  .card-view{
+    padding: 50px;
+
+    .card-body{
       display: flex;
-      justify-content: flex-end;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
 
-      .wrapper-card{
-        margin: 15vh;
-        max-height: 50vh;
-        height: 50vh;
-        min-width: 20vw;
+      .call-for-action{
+        margin-top: 25px;
+        align-self: center;
+      }
+    }
+  }
 
-        .card-title{
-          text-align: center;
+  .card{
+    min-height: 400px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .title-box{
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      transform: translateY(-50px);
+      padding: 15px;
+      background: inherit;
+      border-radius: 15px;
+      text-align: center;
+      text-transform: capitalize;
+
+      @media screen and (max-width: $tablet-screen){
+        width: max-content;
+        overflow-x: hidden;
+      }
+    }
+  }
+
+  #featured-stories{
+
+    .story-row{
+      width: 100%;
+      margin-top: 45px;
+
+      .individual-story{
+        text-align: center;
+        padding: 25px;
+
+        img{
+          width: 351px;
+          height: 351px;
+        }
+
+        .story-title{
           text-transform: capitalize;
         }
       }
     }
+  }
 
+  #nutrients{
+
+    .individual-nutrients{
+      padding: 25px;
+    }
+  }
+
+  #doctors{
+
+    .doctors-list{
+
+      .individual-doctor{
+        padding: 25px;
+
+        img{
+          height: 180px;
+          width: 180px;
+        }
+
+      }
+    }
+  }
+
+  #education{
+
+    .education-list{
+
+      .individual-education{
+        padding: 25px;
+
+      }
+    }
   }
 }

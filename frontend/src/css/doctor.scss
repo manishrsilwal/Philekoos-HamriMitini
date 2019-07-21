@@ -2,4 +2,25 @@
 
 .contents{
 
+  .card-hover{
+    text-align: center;
+    min-height: 530px !important;
+
+    &:hover{
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.45) !important;
+    }
+
+    .individual-doctor{
+      padding: 25px;
+
+      img{
+        height: 300px;
+        width: 300px;
+      }
+    }
+
+    .call-for-action{
+      margin-bottom: 0;
+    }
+  }
 }

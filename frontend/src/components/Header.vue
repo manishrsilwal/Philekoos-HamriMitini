@@ -1,7 +1,7 @@
 <template>
 <div id="app" class="header">
   <b-navbar toggleable="lg" type="light" fixed="top">
-    <b-navbar-brand to="/">HamriMitini</b-navbar-brand>
+    <b-navbar-brand to="/"><img src="logo.png" /></b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -11,11 +11,8 @@
         <b-nav-item to="/food">Food Supplies</b-nav-item>
         <b-nav-item to="/doctor">Doctor Appointment</b-nav-item>
         <b-nav-item to="/education">Education</b-nav-item>
-        <b-nav-item to="">Online Consultancy</b-nav-item>
-        <b-nav-item to="">Location</b-nav-item>
-        <!-- <b-nav-item to="/users">Users</b-nav-item> -->
-        <!-- <b-nav-item to="/geography">Area</b-nav-item> -->
-        <!-- <b-nav-item to="/activity">Activity</b-nav-item> -->
+        <b-nav-item to="">Online Consultant</b-nav-item>
+        <b-nav-item to="">Pharmacy</b-nav-item>
       </b-navbar-nav>
 
       <b-navbar-nav class="ml-auto">
@@ -27,7 +24,11 @@
             <input type="text" class="form-control" placeholder="Search Users" aria-label="Search Users" aria-describedby="search-button">
           </div>
         </form> -->
-        <!-- <b-nav-item class="settings" to="settings"><span class="d-none d-sm-none d-md-none d-lg-inline"><i class="fas fa-cog"></i></span><span class="icon-label d-sm-inline d-md-inline d-lg-none">Settings</span></b-nav-item> -->
+        <b-nav-item to="">MoHP</b-nav-item>
+        <b-nav-item to="">WHO Nepal</b-nav-item>
+        <b-nav-item to="">GIZ</b-nav-item>
+        <b-nav-item to="">USAID</b-nav-item>
+        <b-nav-item to=""><span class="d-none d-sm-none d-md-none d-lg-inline"><i class="fas fa-search"></i></span></span><span class="icon-label d-sm-inline d-md-inline d-lg-none">Search</span></b-nav-item>
         <!-- <b-nav-item to="/logout"><span class="d-none d-sm-none d-md-none d-lg-inline"><i class="fas fa-sign-out-alt"></i></span><span class="icon-label d-sm-inline d-md-inline d-lg-none">Logout</span></b-nav-item> -->
       </b-navbar-nav>
     </b-collapse>
