@@ -2,7 +2,6 @@
 <div id="app">
   <div class="contents">
     <div class="row">
-      <!-- Copyright Text -->
       <app-header></app-header>
 
       <div v-for="contents in stories.data">
@@ -54,7 +53,7 @@ export default {
   data() {
     return {
       stories: '',
-      idea: 0
+      id: 0
     }
   },
 
