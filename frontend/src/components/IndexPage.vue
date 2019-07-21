@@ -14,7 +14,7 @@
             <div class="card-body">
               <div class="description text-center">
                 <h1>HamriMitini</h1>
-                <h4>Devoted To You</h4>
+                <h4>"Devoted To You"</h4>
 
               </div>
               <div class="call-for-action">

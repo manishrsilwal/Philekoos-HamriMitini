@@ -11,7 +11,7 @@
         <b-nav-item to="/food">Food Supplies</b-nav-item>
         <b-nav-item to="/doctor">Doctor Appointment</b-nav-item>
         <b-nav-item to="/education">Education</b-nav-item>
-        <b-nav-item to="">Online Consultancy</b-nav-item>
+        <b-nav-item to="">Online Consultant</b-nav-item>
         <b-nav-item to="">Pharmacy</b-nav-item>
       </b-navbar-nav>
 
