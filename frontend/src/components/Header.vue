@@ -27,6 +27,10 @@
             <input type="text" class="form-control" placeholder="Search Users" aria-label="Search Users" aria-describedby="search-button">
           </div>
         </form> -->
+        <b-nav-item to="">MoHP</b-nav-item>
+        <b-nav-item to="">WHO Nepal</b-nav-item>
+        <b-nav-item to="">GIZ</b-nav-item>
+        <b-nav-item to="">USAID</b-nav-item>
         <!-- <b-nav-item class="settings" to="settings"><span class="d-none d-sm-none d-md-none d-lg-inline"><i class="fas fa-cog"></i></span><span class="icon-label d-sm-inline d-md-inline d-lg-none">Settings</span></b-nav-item> -->
         <!-- <b-nav-item to="/logout"><span class="d-none d-sm-none d-md-none d-lg-inline"><i class="fas fa-sign-out-alt"></i></span><span class="icon-label d-sm-inline d-md-inline d-lg-none">Logout</span></b-nav-item> -->
       </b-navbar-nav>
